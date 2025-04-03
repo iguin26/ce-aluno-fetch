@@ -3,12 +3,6 @@ import fetch, { Headers } from "node-fetch";
 import "dotenv/config";
 
 export const getUserInfos = async (headers, userLogin) => {
-  // const headers = new Headers();
-  // headers.append("Accept", "application/json");
-  // headers.append("Content-Type", "application/json");
-  // headers.append("authentication-token", token);
-  // headers.append("Cookie", cookieHeader);
-
   const raw = JSON.stringify({
     SQLName: "getUserInfos",
     findManyToOne: false,

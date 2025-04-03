@@ -1,11 +1,5 @@
 // getUserQuestsDone.js
 export const getUserQuestsDone = async (headers, userId) => {
-  //   const headers = new Headers();
-  //   headers.append("Accept", "application/json");
-  //   headers.append("Content-Type", "application/json");
-  //   headers.append("authentication-token", token);
-  //   headers.append("Cookie", cookieHeader);
-
   const raw = JSON.stringify({
     SQLName: "getUserQuestsDone",
     findManyToOne: false,
