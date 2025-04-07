@@ -2,6 +2,7 @@
 import { getUserInfos } from "./src/getUserInfos.js";
 import { getUserQuestsDone } from "./src/getUserQuestsDone.js";
 import { getToken } from "./src/getToken.js";
+import { getUserLevel } from "./src/getUserLevel.js";
 
 const main = async () => {
   const login = process.env.MY_USER; //substituir pelo login q o user digitou
@@ -17,9 +18,11 @@ const main = async () => {
   // as quests feitas pelo jogador com o userQuests
 
   const userQuests = await getUserQuestsDone(headers, userId);
+  const userLevel = await getUserLevel(headers, userId);
 
   // console.log(userInfos["payload"]);
-  console.log(userQuests["payload"]);
+  // console.log(userQuests["payload"]);
+  console.log(userLevel["payload"]);
 };
 
 main();
